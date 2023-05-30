@@ -138,12 +138,14 @@ const DrawerCart = () => {
                   <div className="flex items-center justify-between">
                      <Link
                         to="/cart"
+                        onClick={() => dispatch(openDrawer(false))}
                         className="flex items-center justify-center rounded bg-custom-orange px-4 py-1.5 text-center text-base"
                      >
                         View Cart
                      </Link>
                      <Link
                         to="/checkout"
+                        onClick={() => dispatch(openDrawer(false))}
                         className="flex items-center justify-center rounded bg-custom-orange px-4 py-1.5 text-center text-base"
                      >
                         Checkout
