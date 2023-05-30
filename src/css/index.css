@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@800;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   font-family: "Playfair Display", serif;
+   font-family: "Poppins", sans-serif;
+   font-family: "Source Serif Pro", serif;
+   background-color: #f6f6f6;
+}
+
+a {
+   text-decoration: none !important;
+   color: #333 !important;
+}
+
+@layer base {
+   :root {
+      --blue: #007bff;
+      --indigo: #6610f2;
+      --purple: #6f42c1;
+      --pink: #e83e8c;
+      --orange: #fe9931;
+      --yellow: #ffc107;
+      --star: #edb867;
+      --green: #28a745;
+      --teal: #20c997;
+      --cyan: #17a2b8;
+      --red: #dc3545;
+      --hot: #f14705;
+      --dark: #474747;
+   }
+}
+
+.underlineEffect {
+   position: relative;
+}
+
+.underlineEffect::after {
+   content: "";
+   position: absolute;
+   background-color: #2b3445;
+   height: 2px;
+   width: 0;
+   left: 0;
+   bottom: -2px;
+   transition: 0.3s;
+}
+.underlineEffect:hover::after {
+   width: 100%;
+}
+
+.scroll_content {
+   overflow-y: scroll;
+   height: 200px;
+   width: 250px;
+   background-color: #fff;
+   margin: 0 0 10px 0;
+}
+
+.scroll_content::-webkit-scrollbar {
+   width: 5px;
+}
+
+.scroll_content::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   border-radius: 5px;
+}
+
+.scroll_content::-webkit-scrollbar-thumb {
+   border-radius: 5px;
+   -webkit-box-shadow: inset 0 0 6px gray;
+}
+
+.scroll_content::-webkit-scrollbar-thumb:hover {
+   -webkit-box-shadow: inset 0 0 6px gray;
+}
